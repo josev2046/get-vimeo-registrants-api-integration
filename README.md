@@ -2,6 +2,9 @@
 
 To retrieve the list of users who have registered through the lead capture form associated with a specific Vimeo video, you can use the following `curl` command.
 
+![image](https://github.com/user-attachments/assets/8f8a3949-3323-430f-86c0-0fe807a2286a)
+
+
 ~~~```bash
 curl -H "Authorization: Bearer {YOUR_VIMEO_API_TOKEN}" "[https://api.vimeo.com/lead_capture/videos/](https://api.vimeo.com/lead_capture/videos/){VIDEO_ID}/registrants"
 ~~~
@@ -30,7 +33,7 @@ Pagination:
 
 If the video has a large number of registrants, the API might return the results in paginated form. You can use the optional query parameters `page` and `per_page` to navigate through these results. For example, to fetch the second page of registrants, with 50 results per page, you would use a command like this:
 
-Bash
+Bash:
 
 ~~~```bash
 curl -H "Authorization: Bearer {YOUR_VIMEO_API_TOKEN}" "[https://api.vimeo.com/lead_capture/videos/](https://api.vimeo.com/lead_capture/videos/){VIDEO_ID}/registrants?page=2&per_page=50"
