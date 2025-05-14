@@ -47,15 +47,15 @@ Other:
 
 You can use the query parameters to get more specific or organized data:
 
-`page`: If there are more registrants than the per_page limit (currently 25 by default), you can use the page parameter to navigate through the results (e.g., `?page=2` to get the next set of registrants). The paging section in your response indicates if there are more pages (`"next": "/lead_capture/videos/1083907696/registrants?page=2"`).
+* `page`: If there are more registrants than the per_page limit (currently 25 by default), you can use the page parameter to navigate through the results (e.g., `?page=2` to get the next set of registrants). The paging section in your response indicates if there are more pages (`"next": "/lead_capture/videos/1083907696/registrants?page=2"`).
 
-`per_page`: You can adjust the number of registrants returned per page, up to a maximum of 100 (e.g., ?per_page=100).
+* `per_page`: You can adjust the number of registrants returned per page, up to a maximum of 100 (e.g., ?per_page=100).
 
-`sort`: You can sort the registrants based on specific attributes:
+* `sort`: You can sort the registrants based on specific attributes:
 
-`created_at`: Sort by the time the registrant signed up. This could be useful to see the order of registrations.
-`email`: Sort alphabetically by the registrant's email address.
-`sort_direction`: You can specify the sorting order:
+* `created_at`: Sort by the time the registrant signed up. This could be useful to see the order of registrations.
+* `email`: Sort alphabetically by the registrant's email address.
+* `sort_direction`: You can specify the sorting order:
 
-`asc`: Ascending order (e.g., oldest to newest for `created_at`, A to Z for `email`).
-`desc`: Descending order (e.g., newest to oldest for `created_at`, Z to A for `email`).
+* `asc`: Ascending order (e.g., oldest to newest for `created_at`, A to Z for `email`).
+* `desc`: Descending order (e.g., newest to oldest for `created_at`, Z to A for `email`).
