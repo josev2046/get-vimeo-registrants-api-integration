@@ -1,6 +1,6 @@
 ## Getting Registrants for a Vimeo Video via API
 
-Important Note: Accessing the list of registrants via the Vimeo API necessitates a Vimeo Enterprise account with the requisite capabilities enabled. Please refer to the Vimeo API documentation concerning the `"Lead Capture"` endpoints for comprehensive details regarding account prerequisites, authentication procedures, API usage guidelines, error handling, and the format of the registrant data returned.
+**Important Note:** Accessing the list of registrants via the Vimeo API necessitates a Vimeo Enterprise account with the requisite capabilities enabled. Please refer to the Vimeo API documentation concerning the `"Lead Capture"` endpoints for comprehensive details regarding account prerequisites, authentication procedures, API usage guidelines, error handling, and the format of the registrant data returned.
 
 To obtain the list of users who have registered through the lead capture form associated with a specific Vimeo video, the following `curl` command can be used:
 
@@ -8,7 +8,7 @@ To obtain the list of users who have registered through the lead capture form as
 curl -H "Authorization: Bearer {YOUR_VIMEO_API_TOKEN}" "https://api.vimeo.com/lead_capture/{resource_type}/{resource_id}/registrants"
 ~~~
 
-Explanation:
+**Explanation:**
 
 ![image](https://github.com/user-attachments/assets/8f8a3949-3323-430f-86c0-0fe807a2286a)
 
@@ -24,7 +24,7 @@ Explanation:
 * `"https://api.vimeo.com/lead_capture/videos/{VIDEO_ID}/registrants"`: This is the API endpoint you're calling.
 Replace `{VIDEO_ID}` with the unique identifier of the Vimeo video you're interested in. The `videos` part of the URL specifies the resource type.
 
-Possible Responses:
+**Possible Responses:**
 
 A successful request (indicated by an HTTP status code of `200 OK`) will return a JSON response. This JSON will contain an array of objects, where each object represents a user who has registered. The information provided for each registrant is likely to include:
 
@@ -33,11 +33,11 @@ A successful request (indicated by an HTTP status code of `200 OK`) will return 
 * Potentially other data that was captured by the form's fields.
 * Timestamps related to when they registered.
 
-Pagination:
+**Pagination:**
 
 If the video has a large number of registrants, the API might return the results in paginated form. You can use the optional query parameters `page` and `per_page` to navigate through these results. For example, to fetch the second page of registrants, with 50 results per page, you would use a command like this:
 
-Bash:
+**Bash:**
 
 ~~~```bash
 curl -H "Authorization: Bearer {YOUR_VIMEO_API_TOKEN}" "[https://api.vimeo.com/lead_capture/videos/](https://api.vimeo.com/lead_capture/videos/){VIDEO_ID}/registrants?page=2&per_page=50"
@@ -45,7 +45,7 @@ curl -H "Authorization: Bearer {YOUR_VIMEO_API_TOKEN}" "[https://api.vimeo.com/l
 
 Remember to substitute `{YOUR_VIMEO_API_TOKEN}` with your actual API token and `{VIDEO_ID}` with the specific ID of the video you're querying.
 
-Other:
+**Other:**
 
 You can use the query parameters to get more specific or organized data:
 
