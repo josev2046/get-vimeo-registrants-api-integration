@@ -1,15 +1,17 @@
 ## Getting Registrants for a Vimeo Video via API
 
+Important Note: Accessing the list of registrants via the Vimeo API requires a Vimeo account with the necessary capabilities enabled. Please consult the Vimeo API documentation for the "Lead Capture" endpoints for detailed information on account requirements, authentication, API usage, error handling, and the format of the registrant data returned.
+
 To retrieve the list of users who have registered through the lead capture form associated with a specific Vimeo video, you can use the following `curl` command.
-
-![image](https://github.com/user-attachments/assets/8f8a3949-3323-430f-86c0-0fe807a2286a)
-
 
 ~~~```bash
 curl -H "Authorization: Bearer {YOUR_VIMEO_API_TOKEN}" "[https://api.vimeo.com/lead_capture/videos/](https://api.vimeo.com/lead_capture/videos/){VIDEO_ID}/registrants"
 ~~~
 
 Explanation:
+
+![image](https://github.com/user-attachments/assets/8f8a3949-3323-430f-86c0-0fe807a2286a)
+
 
 * `-H "Authorization: Bearer {YOUR_VIMEO_API_TOKEN}"`: This sets the necessary authorization header for the Vimeo API.
 
